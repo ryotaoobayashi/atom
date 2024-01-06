@@ -1,0 +1,222 @@
+@use "sass:math";
+@use "sass:map";
+@use "../global" as *;
+
+.fix {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  z-index: 5;
+  .fix__inner {
+    .fix__btns {
+      display: flex;
+      .fix__btn {
+        &:first-child {
+          a {
+            padding: get-sp-vw(10) 0;
+            background-color: map.get($color, "m-text");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: get-sp-vw(140);
+            height: get-sp-vw(45);
+            img {
+              width: get-sp-vw(16);
+            }
+            .fix_title {
+              color: map.get($color, "m-bg");
+              margin-left: get-sp-vw(10);
+              font-size: get-sp-vw(14);
+              font-weight: bold;
+              letter-spacing: -0.01em;
+              text-align: center;
+            }
+          }
+        }
+        &:nth-child(2) {
+          a {
+            border-left: 1px solid #4152c3;
+            padding: get-sp-vw(10) 0;
+            background-color: map.get($color, "m-text");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: get-sp-vw(192);
+            height: get-sp-vw(45);
+            img {
+              margin-top: get-sp-vw(5);
+              width: get-sp-vw(20);
+            }
+            .fix_title {
+              color: map.get($color, "m-bg");
+              margin-left: get-sp-vw(10);
+              font-size: get-sp-vw(14);
+              font-weight: bold;
+              letter-spacing: -0.01em;
+              text-align: center;
+            }
+          }
+        }
+        &:last-child {
+          a {
+            border-left: 1px solid #4152c3;
+            padding: get-sp-vw(10) 0;
+            background-color: map.get($color, "m-text");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: get-sp-vw(42);
+            height: get-sp-vw(45);
+            img {
+              display: block;
+              width: get-sp-vw(17);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fix-menu {
+  width: 100vw;
+  background-color: map.get($color, "m-text");
+  .fix-menu__inner {
+    margin: 0 auto;
+    width: get-sp-vw(300);
+    padding: get-sp-vw(40) 0;
+    @include mq($from: desktop) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 0;
+      max-width: 900px;
+      width: 95%;
+    }
+    .fix-menu__title {
+      color: map.get($color, "m-bg");
+      font-size: get-sp-vw(21);
+      font-weight: bold;
+      letter-spacing: -0.01em;
+      text-align: center;
+      @include mq($from: desktop) {
+        text-align: left;
+        font-size: 24px;
+      }
+      span {
+        display: block;
+        font-weight: 400;
+        margin-top: get-sp-vw(10);
+        font-size: get-sp-vw(14);
+        @include mq($from: desktop) {
+          margin-top: 10px;
+          font-size: 16px;
+          font-weight: 400;
+        }
+      }
+    }
+    .fix-menu__btns {
+      margin-top: get-sp-vw(30);
+      @include mq($from: desktop) {
+        margin-top: 0;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .fix-menu__btn {
+        a {
+          position: relative;
+          display: flex;
+          align-items: center;
+          font-weight: bold;
+          background-color: map.get($color, "m-bg");
+          width: get-sp-vw(300);
+          height: get-sp-vw(70);
+          gap: get-sp-vw(19);
+          letter-spacing: -0.01em;
+          font-size: get-sp-vw(16);
+          padding: get-sp-vw(20) get-sp-vw(30) get-sp-vw(20) get-sp-vw(23);
+          @include mq($from: desktop) {
+            height: 70px;
+            font-weight: bold;
+            padding: 20px 30px 20px 23px;
+            width: 300px;
+            gap: 19px;
+            font-size: 16px;
+            letter-spacing: -0.01em;
+            transition: all 0.3s;
+            border: 1px solid map.get($color, "m-bg");
+            &:hover {
+              
+              background-color: #0017af;
+              color: map.get($color, "m-bg");
+              &:after {
+                color: map.get($color, "m-bg");
+              }
+              img{
+                &:first-child{
+                  opacity: 0;
+                }
+                &:last-child {
+                  opacity: 1;
+                }
+              }
+            }
+          }
+          &:after {
+            position: absolute;
+            content: "〉";
+            right: 10px;
+            bottom: 50%;
+            transform: translateY(50%);
+            font-size: get-sp-vw(16);
+            letter-spacing: -0.01em;
+            color: map.get($color, "m-text");
+            @include mq($from: desktop) {
+              transition: all 0.3s;
+              font-size: 16px;
+              letter-spacing: -0.01em;
+            }
+          }
+          .fix-menu__icon {
+            position: relative;
+          }
+          img {
+            width: get-sp-vw(25);
+            @include mq($from: desktop) {
+              transition: all 0.3s;
+              width: 25px;
+            }
+            @include mq($from: desktop) {
+              &:first-child{
+                opacity: 1;
+                position: relative;
+                z-index: 1;
+              }
+              &:last-child {
+                opacity: 0;
+                position: absolute;
+                top: 0;
+                right: 0;
+              }
+            }
+          }
+        }
+        &:last-child {
+          margin-top: get-sp-vw(10);
+          @include mq($from: desktop) {
+            margin-top: 0;
+          }
+          a {
+            img {
+              width: get-sp-vw(30);
+              @include mq($from: desktop) {
+                width: 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

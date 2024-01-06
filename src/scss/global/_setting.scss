@@ -2,18 +2,27 @@
 @use "sass:map";
 
 $palette: (
-
+  "white": #fff,
+  "blue": #0017af,
+  "black": #191444,
+  "green": #67d271,
 );
 $color: (
+  "m-bg": map.get($palette, "white"),
+  "m-text": map.get($palette, "blue"),
+  "accent": map.get($palette, "green"),
 );
 $breakpoint: (
   "mobile": 0px,
   // > iPhone Max (Portlait)
   "tablet": 429px,
   // > iPad Pro (Portlait)
-  "desktop": 835px,
-  "wide": 1440px,
+  "desktop": 900px,
+  "wide": 1200px,
 );
 $fontfamily: (
-
+  "base": (
+    "Noto Sans JP",
+    sans-serif
+  ),
 );

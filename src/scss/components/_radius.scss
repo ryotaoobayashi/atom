@@ -1,0 +1,15 @@
+@use "sass:math";
+@use "sass:map";
+@use "../global" as *;
+
+.c-radius{
+  position: absolute;
+  animation: upDown 4s infinite;
+  border-radius: 50%;
+}
+@keyframes upDown {
+  0% { transform:translateY(0px); }
+  25% { transform:translateY(-10px); }
+  50% { transform: translateX(-10px); }
+  100% { transform:translate(0px); }
+}

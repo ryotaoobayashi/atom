@@ -3,7 +3,16 @@
 @use "others/destyle";
 @use "others/reset";
 @use "components/header";
-@use "sections/sample/sample";
+@use "components/fix-btn";
+@use "components/global-navigation";
+@use "components/footer";
+@use "components/radius";
+@use "sections/fv";
+@use "sections/message";
+@use "sections/know";
+@use "sections/number";
+@use "sections/work";
+@use "sections/staff";
 
 /* stylelint-disable-next-line scss/at-rule-no-unknown */
 @tailwind utilities;

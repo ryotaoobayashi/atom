@@ -1,0 +1,128 @@
+@use "sass:math";
+@use "sass:map";
+@use "../global" as *;
+
+.c-header__menu {
+  position: fixed;
+  top: 0;
+  right: 50%;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+  height: 100dvh;
+  padding: get-sp-vw(0) 0 get-sp-vw(60);
+  background-image: url("../img/common/menu-back.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: translateX(50%);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s;
+
+  @include mq($from: desktop) {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto;
+    height: auto;
+    padding: 0;
+    background-color: transparent;
+    background-image: none;
+    transform: translateX(0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.is-open {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.c-global-navigation {
+  .c-global-navigation {
+    .c-global-navigation-inner {
+      width: get-sp-vw(350);
+      margin: get-sp-vw(115) auto 0;
+      font-weight: 400;
+      font-size: get-sp-vw(15);
+      letter-spacing: 0;
+      @include mq($from: desktop) {
+        font-weight: bold;
+        display: flex;
+        gap: 10px;
+        font-size: 13px;
+        width: auto;
+        margin: 0;
+        letter-spacing: 0.04em;
+      }
+      @include mq($from: wide) {
+        font-weight: bold;
+        display: flex;
+        gap: 20px;
+        font-size: 16px;
+        width: auto;
+        margin: 0;
+        letter-spacing: 0.04em;
+      }
+
+      li {
+        @include mq($from: desktop) {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: left;
+        }
+
+        &:last-child {
+          @include mq($from: desktop) {
+            font-size: 16px;
+          }
+
+          a {
+            position: relative;
+            display: table;
+            width: get-sp-vw(350);
+            margin: get-sp-vw(46) 0 get-sp-vw(50);
+            padding: get-sp-vw(20) get-sp-vw(110) get-sp-vw(20) get-sp-vw(103);
+            color: map.get($color, "m-bg");
+            background-color: map.get($color, "m-tet");
+
+            @include mq($from: desktop) {
+              display: block;
+              width: 175px;
+              margin: 0;
+              height: 45px;
+              padding: 13px 0;
+              text-align: center;
+              color: map.get($color, "m-bg");
+              background-color: map.get($color, "m-text");
+              transition: all 0.3s;
+
+              &:hover {
+                color: map.get($color, "m-text");
+                background-color: map.get($color, "m-bg");
+              }
+            }
+          }
+        }
+
+        a {
+          position: relative;
+          display: block;
+          padding: get-sp-vw(25) get-sp-vw(0) get-sp-vw(25) get-sp-vw(10);
+
+          @include mq($from: desktop) {
+            display: block;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+            &:hover {
+              opacity: 0.6;
+            }
+          }
+        }
+      }
+    }
+  }
+}

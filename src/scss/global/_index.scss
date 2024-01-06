@@ -6,4 +6,110 @@
 @forward "mq";
 @use "setting" as *;
 
+body {
+          overflow-x: hidden;
+          color: map.get($color, "m-text");
+          font-family: map.get($fontfamily, "base");
+          background-color: map.get($color, "m-bg");
+}
 
+.eachTextAnime span {
+          opacity: 0;
+          letter-spacing: -0.23em;
+}
+.eachTextAnime.appeartext span {
+          animation: text_anime_on 0.1s ease-out forwards;
+}
+@keyframes text_anime_on {
+          0% {
+                    opacity: 0;
+          }
+          100% {
+                    opacity: 1;
+          }
+}
+
+.js-fade {
+          opacity: 0;
+          transition: all 0.5s;
+          transform: translateY(60px);
+
+          &.is-animated {
+                    opacity: 1;
+                    transform: translateY(0);
+          }
+}
+
+.bgLRextend {
+          &::before {
+                    animation-name: bgLRextendAnime;
+                    animation-duration: 1s;
+                    animation-fill-mode: forwards;
+                    animation-delay: 1s;
+          }
+}
+
+@keyframes bgLRextendAnime {
+          0% {
+                    opacity: 0;
+                    transform-origin: left;
+                    transform: scaleX(0);
+          }
+          100% {
+                    opacity: 1;
+                    transform-origin: left;
+                    transform: scaleX(1);
+          }
+}
+
+.bgLRextend {
+          opacity: 1 !important;
+}
+.slide-in {
+          overflow: hidden;
+          display: inline-block;
+}
+
+.slide-in_inner {
+          display: inline-block;
+}
+.leftAnime {
+          opacity: 0; /*事前に透過0にして消しておく*/
+}
+.bgLRextend .leftAnime {
+          animation-name: slideTextX100;
+          animation-duration: 0.8s;
+          animation-delay: 1.8s;
+          animation-fill-mode: forwards;
+          opacity: 0;
+}
+@keyframes slideTextX100 {
+          from {
+                    transform: translateX(-100%); /*要素を左の枠外に移動*/
+                    opacity: 0;
+          }
+
+          to {
+                    transform: translateX(0); /*要素を元の位置に移動*/
+                    opacity: 1;
+          }
+}
+
+.bgLRextend .leftAnimeInner {
+          animation-name: slideTextX-100;
+          animation-duration: 0.8s;
+          animation-delay: 1.8s;
+          animation-fill-mode: forwards;
+          opacity: 0;
+}
+@keyframes slideTextX-100 {
+          from {
+                    transform: translateX(100%); /*要素を右の枠外に移動*/
+                    opacity: 0;
+          }
+
+          to {
+                    transform: translateX(0); /*要素を元の位置に移動*/
+                    opacity: 1;
+          }
+}
