@@ -4,6 +4,7 @@ import scroll from './common/scroll'
 import fvText from './common/fvText'
 import fadeIn from './common/fadeIn'
 import textsAnime from './common/textsAnime'
+import spMenuStyle from './common/spMenuStyle'
 
 window.addEventListener('DOMContentLoaded', function () {
   readmore()
@@ -12,5 +13,6 @@ window.addEventListener('DOMContentLoaded', function () {
   fvText()
   fadeIn()
   textsAnime()
+  spMenuStyle()
 })
 

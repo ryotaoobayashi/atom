@@ -4,23 +4,23 @@
 
 .c-header__menu {
   position: fixed;
+  overflow-y: scroll;
   top: 0;
-  right: 50%;
-  z-index: 2;
+  right: -100%;
+  z-index: 10;
   width: 100vw;
   height: 100vh;
   height: 100dvh;
-  padding: get-sp-vw(0) 0 get-sp-vw(60);
-  background-image: url("../img/common/menu-back.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  transform: translateX(50%);
+  padding: get-sp-vw(0) 0 get-sp-vw(40);
+  background-color: #0017af;
   visibility: hidden;
   opacity: 0;
   transition: all 0.4s;
 
   @include mq($from: desktop) {
+    z-index: 2;
     position: relative;
+    overflow-y: visible;
     top: auto;
     right: auto;
     width: auto;
@@ -36,18 +36,87 @@
   &.is-open {
     visibility: visible;
     opacity: 1;
+    right: 0%;
+  }
+  .fix-menu__btns {
+    width: get-sp-vw(300);
+    margin: get-sp-vw(40) auto 0;
+    .fix-menu__btn {
+      a {
+        position: relative;
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        background-color: map.get($color, "m-bg");
+        width: get-sp-vw(300);
+        height: get-sp-vw(70);
+        gap: get-sp-vw(19);
+        letter-spacing: -0.01em;
+        font-size: get-sp-vw(16);
+        padding: get-sp-vw(20) get-sp-vw(30) get-sp-vw(20) get-sp-vw(23);
+        &:after {
+          position: absolute;
+          content: "〉";
+          right: 10px;
+          bottom: 50%;
+          transform: translateY(50%);
+          font-size: get-sp-vw(16);
+          letter-spacing: -0.01em;
+          color: map.get($color, "m-text");
+        }
+        .fix-menu__icon {
+          position: relative;
+        }
+        img {
+          width: get-sp-vw(25);
+        }
+      }
+      &:last-child {
+        margin-top: get-sp-vw(25);
+        a {
+          img {
+            width: get-sp-vw(30);
+          }
+        }
+      }
+    }
+  }
+  .c-header-explain-sp{
+    width: get-sp-vw(300);
+    margin: get-sp-vw(50) auto 0;
+    color: #fff;
+    font-weight: 300;
+    line-height: 2;
+    font-size: get-sp-vw(14);
+    letter-spacing: 0;
   }
 }
 
 .c-global-navigation {
   .c-global-navigation {
+    width: get-sp-vw(300);
+    margin: get-sp-vw(50) auto 0;
+    font-weight: 400;
+    font-size: get-sp-vw(15);
+    letter-spacing: 0;
+    @include mq($from: desktop) {
+      font-size: 13px;
+      width: auto;
+      margin: 0;
+    }
+    .c-global-navigation__title {
+      color: #fff;
+      font-weight: bold;
+      font-size: get-sp-vw(18);
+      letter-spacing: 0;
+    }
     .c-global-navigation-inner {
-      width: get-sp-vw(350);
-      margin: get-sp-vw(115) auto 0;
-      font-weight: 400;
-      font-size: get-sp-vw(15);
+      margin: get-sp-vw(30) auto 0;
+      font-weight: bold;
+      font-size: get-sp-vw(16);
       letter-spacing: 0;
       @include mq($from: desktop) {
+        font-weight: 400;
         font-weight: bold;
         display: flex;
         gap: 10px;
@@ -67,11 +136,25 @@
       }
 
       li {
+        color: map.get($color, "m-bg");
         @include mq($from: desktop) {
+          color: map.get($color, "m-text");
           display: flex;
           align-items: center;
           justify-content: center;
           text-align: left;
+        }
+        &.pc-menu{
+          display: none;
+          @include mq($from: desktop) {
+            display: flex;
+          }
+        }
+        &:first-child {
+          border-top: 1px solid #4152c3;
+          @include mq($from: desktop) {
+            border-top: none;
+          }
         }
 
         &:last-child {
@@ -82,7 +165,7 @@
           a {
             position: relative;
             display: table;
-            width: get-sp-vw(350);
+            width: get-sp-vw(300);
             margin: get-sp-vw(46) 0 get-sp-vw(50);
             padding: get-sp-vw(20) get-sp-vw(110) get-sp-vw(20) get-sp-vw(103);
             color: map.get($color, "m-bg");
@@ -110,15 +193,28 @@
         a {
           position: relative;
           display: block;
-          padding: get-sp-vw(25) get-sp-vw(0) get-sp-vw(25) get-sp-vw(10);
-
+          padding: get-sp-vw(25) get-sp-vw(0) get-sp-vw(25) get-sp-vw(5);
+          border-bottom: 1px solid #4152c3;
           @include mq($from: desktop) {
+            border-bottom: none;
             display: block;
             margin: 0;
             padding: 0;
             transition: all 0.3s;
             &:hover {
               opacity: 0.6;
+            }
+          }
+          &:after {
+            position: absolute;
+            content: "〉";
+            right: 0;
+            bottom: 50%;
+            transform: rotate(0deg) translateY(50%);
+            color: map.get($color, "m-bg");
+            font-size: get-sp-vw(16);
+            @include mq($from: desktop) {
+              display: none;
             }
           }
         }
