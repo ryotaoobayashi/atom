@@ -4,8 +4,10 @@
 
 .number {
   position: relative;
-  margin: get-sp-vw(80) 0 get-sp-vw(65);
+  margin: get-sp-vw(80) 0 get-sp-vw(0);
+  background-color: #eceeef;
   @include mq($from: desktop) {
+    background-color: transparent;
     margin-top: 80px;
     margin-bottom: 90px;
   }
@@ -13,22 +15,47 @@
     position: relative;
     margin: 0 auto;
     width: get-sp-vw(315);
+    padding: get-sp-vw(45) 0;
     @include mq($from: desktop) {
+      background-color: #eceeef;
+      padding: 50px 40px;
       max-width: 1200px;
       width: 95%;
     }
-    .number__imagearea {
+    .number__titlearea {
+      @include mq($from: desktop) {
+        display: flex;
+        gap: 20px;
+      }
+    }
+    .number__imageareas {
       z-index: 1;
-      margin-top: get-sp-vw(30);
-      width: 100%;
+      margin: get-sp-vw(30) auto 0;
       @include mq($from: desktop) {
         margin-top: 35px;
-        width: 100%;
-        height: auto;
       }
-      img {
-        width: 100%;
-        height: auto;
+      .number__imagearea {
+        &:first-child {
+          width: get-sp-vw(293);
+          @include mq($from: desktop) {
+            margin: 0 auto;
+            width: 88%;
+            height: auto;
+          }
+        }
+        &:last-child {
+          width: 100%;
+          margin-top: get-sp-vw(40);
+          @include mq($from: desktop) {
+            margin: 40px auto 0;
+            width: 95%;
+            height: auto;
+          }
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
     h3 {

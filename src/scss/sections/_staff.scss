@@ -105,12 +105,12 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 1000px;
-        width: 95%;
+        max-width: 1050px;
+        width: 98%;
       }
       .staff__textarea {
         @include mq($from: desktop) {
-          width: 515px;
+          width: 450px;
         }
         .staff__subtitle {
           position: relative;
@@ -172,13 +172,12 @@
         height: auto;
         @include mq($from: desktop) {
           margin: 35px 0 0 0;
-          width: 286px;
-          height: auto;
+          width: 500px;
         }
         .c-radius12 {
           z-index: 3;
           top: 50%;
-          left: -50%;
+          left: -10%;
           width: 25px;
           height: 25px;
           background-color: #0017af;
@@ -186,14 +185,14 @@
         .c-radius13 {
           z-index: 3;
           top: 20%;
-          left: -50%;
+          left: -10%;
           width: 65px;
           height: 65px;
           background-color: #67d271;
         }
-        img {
+        .staff__imagearea-svg{
           width: 100%;
-          height: auto;
+          height: 100%;
         }
       }
     }

@@ -6,6 +6,10 @@
 @forward "mq";
 @use "setting" as *;
 
+html{
+          overflow-x: hidden;     
+}
+
 body {
           overflow-x: hidden;
           color: map.get($color, "m-text");
