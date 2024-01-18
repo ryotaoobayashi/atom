@@ -5,108 +5,128 @@
 .fv {
   position: relative;
   overflow: hidden;
+
   &::after {
     position: absolute;
-    content: "";
-    right: 0;
     top: 0;
+    right: 0;
     width: 100%;
     height: 76%;
     background-color: map.get($color, "accent");
+    content: "";
+
     @include mq($from: desktop) {
-      height: 90%;
       width: 70%;
+      height: 90%;
     }
   }
+
   .fv__inner {
     position: relative;
+    width: get-sp-vw(315);
     margin: 0 auto;
     padding: get-sp-vw(40) 0 0;
-    width: get-sp-vw(315);
+
     @include mq($from: desktop) {
       display: flex;
-      padding: 80px 0 115px;
-      max-width: 1200px;
       width: 95%;
+      max-width: 1200px;
+      padding: 80px 0 115px;
     }
+
     .fv__textarea {
       position: relative;
       z-index: 2;
       padding-top: get-sp-vw(30);
+
       @include mq($from: desktop) {
-        width: 618px;
+        width: 630px;
         padding-top: 50px;
       }
+
       .fv__logo {
         position: absolute;
-        width: get-sp-vw(152);
         top: 0;
         left: 0;
+        width: get-sp-vw(152);
+
         @include mq($from: desktop) {
-          top: 0px;
+          top: 0;
           left: 0;
           width: 175px;
         }
+
         img {
           width: 100%;
           height: auto;
           object-fit: contain;
         }
       }
+
       h2 {
         font-weight: bold;
         font-size: get-sp-vw(57);
         line-height: 1;
         letter-spacing: -0.01em;
+        white-space: nowrap;
+
         @include mq($from: desktop) {
+          font-size: 122px;
           line-height: 1;
           letter-spacing: -0.01em;
-          font-size: 122px;
+          white-space: nowrap;
         }
+
         .fvtext-small {
           display: block;
-          font-size: get-sp-vw(26);
           margin-bottom: get-sp-vw(20);
+          font-size: get-sp-vw(26);
+
           @include mq($from: desktop) {
             margin-bottom: 20px;
             font-size: 26px;
           }
         }
-        
       }
+
       .fv__subtitle {
-        font-weight: bold;
-        line-height: 1.5;
-        font-size: get-sp-vw(21);
         margin-top: get-sp-vw(10);
+        font-weight: bold;
+        font-size: get-sp-vw(21);
+        line-height: 1.5;
+
         @include mq($from: desktop) {
-          line-height: 1;
           margin-top: 30px;
           font-size: 36px;
+          line-height: 1;
         }
       }
+
       .fv__text {
-        line-height: 1.8;
         margin-top: get-sp-vw(303);
         font-size: get-sp-vw(16);
+        line-height: 1.8;
+
         @include mq($from: desktop) {
           margin-top: 30px;
           font-size: 18px;
         }
       }
     }
+
     .fv__imagearea {
       position: absolute;
-      z-index: 1;
-      bottom: get-sp-vw(140);
       right: 50%;
-      transform: translateX(50%);
+      bottom: get-sp-vw(140);
+      z-index: 1;
       width: get-sp-vw(425);
+      transform: translateX(50%);
+
       @include mq($from: desktop) {
-        transform: translateX(0%);
-        bottom: 0px;
         right: -60px;
+        bottom: 0;
         width: 855px;
+        transform: translateX(0%);
       }
     }
   }

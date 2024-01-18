@@ -5,21 +5,24 @@
 .work {
   position: relative;
   padding: get-sp-vw(50) 0;
-  background-color: map.get($color, "accent");
   overflow-x: hidden;
+  background-color: map.get($color, "accent");
+
   @include mq($from: desktop) {
-    overflow-x: hidden;
     padding: 50px 0;
+    overflow-x: hidden;
     background-color: map.get($color, "accent");
   }
+
   .work__inner {
     position: relative;
 
     @include mq($from: desktop) {
-      margin: 0 auto;
-      max-width: 1200px;
       width: 95%;
+      max-width: 1200px;
+      margin: 0 auto;
     }
+
     .c-radius1 {
       top: 1%;
       left: -20%;
@@ -27,6 +30,7 @@
       height: 60px;
       background-color: #0017af;
     }
+
     .c-radius2 {
       top: 40%;
       left: -30%;
@@ -34,6 +38,7 @@
       height: 113px;
       background-color: #eaeaea;
     }
+
     .c-radius3 {
       top: 50%;
       left: -20%;
@@ -41,6 +46,7 @@
       height: 60px;
       background-color: #0017af;
     }
+
     .c-radius6 {
       top: 10%;
       right: -20%;
@@ -48,6 +54,7 @@
       height: 128px;
       background-color: #0017af;
     }
+
     .c-radius7 {
       top: 60%;
       right: -20%;
@@ -55,179 +62,207 @@
       height: 63px;
       background-color: #eaeaea;
     }
+
     .work__fv {
-      margin: 0 auto;
       max-width: get-sp-vw(315);
+      margin: 0 auto;
+
       @include mq($from: desktop) {
-        margin: 0;
-        max-width: 1200px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        max-width: 1200px;
+        margin: 0;
       }
+
       .work__textarea {
         @include mq($from: desktop) {
           width: 515px;
         }
+
         .work__subtitle {
           position: relative;
-          display: block;
-          font-weight: bold;
-          color: map.get($color, "accent");
           z-index: 2;
-          padding: get-sp-vw(5) 0;
-          margin-left: get-sp-vw(-30);
-          text-align: center;
-          margin-bottom: get-sp-vw(30);
+          display: block;
           width: get-sp-vw(162);
+          margin-bottom: get-sp-vw(30);
+          margin-left: get-sp-vw(-30);
+          padding: get-sp-vw(5) 0;
+          color: map.get($color, "accent");
+          font-weight: bold;
           font-size: get-sp-vw(21);
+          text-align: center;
+
           @include mq($from: desktop) {
-            padding: 5px 0;
-            margin-left: -100px;
-            text-align: center;
-            margin-bottom: 30px;
             width: 328px;
+            margin-bottom: 30px;
+            margin-left: -100px;
+            padding: 5px 0;
             font-size: 24px;
+            text-align: center;
           }
-          &::before{
-            opacity: 0;
-            z-index: -1;
+
+          &::before {
             position: absolute;
-            content: "";
             right: 0;
             bottom: 0;
+            z-index: -1;
             width: 100%;
             height: 100%;
             background-color: map.get($color, "m-bg");
+            opacity: 0;
+            content: "";
           }
         }
+
         h3 {
           font-weight: bold;
+          font-size: get-sp-vw(28);
           line-height: 1.8;
           letter-spacing: -0.01em;
-          font-size: get-sp-vw(28);
+
           @include mq($from: desktop) {
+            font-size: 30px;
             line-height: 1.8;
             letter-spacing: -0.01em;
-            font-size: 30px;
           }
         }
+
         .work__explain {
-          line-height: 1.8;
-          letter-spacing: -0.01em;
           margin-top: get-sp-vw(30);
           font-size: get-sp-vw(16);
+          line-height: 1.8;
+          letter-spacing: -0.01em;
+
           @include mq($from: desktop) {
             margin-top: 20px;
             font-size: 18px;
           }
         }
       }
+
       .work__imagearea {
         z-index: 1;
         width: get-sp-vw(231);
         margin: 0 auto;
+
         @include mq($from: desktop) {
-          margin: 0;
-          margin-top: 35px;
           width: 386px;
           height: auto;
+          margin: 0;
+          margin-top: 35px;
         }
+
         img {
           width: 100%;
           height: auto;
         }
       }
     }
+
     .work__items {
       display: flex;
       flex-direction: column;
-      margin-top: get-sp-vw(30);
       gap: get-sp-vw(35);
+      margin-top: get-sp-vw(30);
+
       @include mq($from: desktop) {
-        margin-top: 70px;
         gap: 70px;
+        margin-top: 70px;
       }
+
       .work-item {
         position: relative;
-        padding: get-sp-vw(25);
         width: get-sp-vw(343);
         margin-left: auto;
+        padding: get-sp-vw(25);
+
         @include mq($from: desktop) {
-          width: auto;
-          margin-left: 0;
           display: flex;
           justify-content: space-between;
+          width: auto;
+          margin-left: 0;
           padding: 40px 60px 0 0;
         }
+
         .c-radius4 {
-          z-index: 3;
           top: 60%;
-          right: 4%;
+          right: 0%;
+          z-index: 3;
           width: 65px;
           height: 65px;
           background-color: #67d271;
         }
+
         .c-radius5 {
-          z-index: 3;
           top: 70%;
           right: -5%;
+          z-index: 3;
           width: 32px;
           height: 32px;
-          background-color: #ffffff;
+          background-color: #fff;
         }
+
         .c-radius8 {
-          z-index: 3;
           top: 45%;
           right: 50%;
+          z-index: 3;
           width: 32px;
           height: 32px;
           background-color: #0017af;
         }
+
         .c-radius9 {
-          z-index: 3;
           top: 60%;
           right: 40%;
+          z-index: 3;
           width: 129px;
           height: 129px;
           background-color: #67d271;
         }
+
         .c-radius10 {
-          z-index: 3;
           top: 80%;
           right: 40%;
+          z-index: 3;
           width: 33px;
           height: 33px;
-          background-color: #ffffff;
+          background-color: #fff;
         }
+
         .c-radius11 {
-          z-index: 3;
           top: 40%;
           right: -3%;
+          z-index: 3;
           width: 54px;
           height: 54px;
           background-color: #0017af;
         }
+
         &:nth-child(2n) {
           margin-right: auto;
           margin-left: 0;
+
           @include mq($from: desktop) {
-            margin-right: 0;
             flex-direction: row-reverse;
-            padding: 40px 0px 0 60px;
+            margin-right: 0;
+            padding: 40px 0 0 60px;
           }
+
           .work-item__imagearea {
             position: relative;
             z-index: 2;
             margin-right: get-sp-vw(-80);
             margin-left: 0;
+
             @include mq($from: desktop) {
+              margin-top: 10px;
               margin-right: -85px;
               margin-left: 0;
-              margin-top: 10px;
             }
           }
         }
+
         &:last-child {
           .work-item__state {
             @include mq($from: desktop) {
@@ -235,62 +270,73 @@
             }
           }
         }
-        &:after {
+
+        &::after {
           position: absolute;
-          content: "";
-          right: 0;
           top: 0;
+          right: 0;
           width: 100%;
           height: 100%;
           background-color: map.get($color, "m-bg");
+          content: "";
+
           @include mq($from: desktop) {
             height: 88%;
           }
         }
+
         .work-item__imagearea {
           position: relative;
           z-index: 2;
           width: 100vw;
-          margin-left: get-sp-vw(-80);
           height: get-sp-vw(255);
+          margin-left: get-sp-vw(-80);
+
           @include mq($from: desktop) {
-            margin-left: -85px;
-            margin-top: 10px;
             width: 615px;
             height: auto;
+            margin-top: 10px;
+            margin-left: -85px;
           }
+
           img {
             width: 100%;
-            object-fit: cover;
             height: 100%;
+            object-fit: cover;
           }
         }
+
         .work-item__textarea {
           position: relative;
           z-index: 2;
           margin-top: get-sp-vw(25);
+
           @include mq($from: desktop) {
-            margin-top: 0;
             width: 488px;
+            margin-top: 0;
           }
+
           .work-item__icon {
             position: relative;
             width: get-sp-vw(65);
             margin-bottom: get-sp-vw(25);
+
             @include mq($from: desktop) {
               width: 65px;
               height: auto;
               margin-bottom: 25px;
             }
-            .work-item-radius{
+
+            .work-item-radius {
               position: absolute;
-              border-radius: 50%;
               top: 0;
               left: -25%;
               width: 38px;
               height: 38px;
               background-color: #67d271;
+              border-radius: 50%;
             }
+
             img {
               position: relative;
               z-index: 3;
@@ -298,38 +344,45 @@
               height: auto;
             }
           }
+
           h4 {
+            margin-bottom: get-sp-vw(15);
             font-weight: bold;
             font-size: get-sp-vw(21);
             line-height: 1.8;
             letter-spacing: -0.01em;
-            margin-bottom: get-sp-vw(15);
+
             @include mq($from: desktop) {
-              line-height: 1.8;
-              letter-spacing: -0.01em;
               margin-bottom: 20px;
               font-size: 24px;
+              line-height: 1.8;
+              letter-spacing: -0.01em;
             }
           }
+
           .work-item__explain {
-            line-height: 1.8;
             font-size: get-sp-vw(14);
+            line-height: 1.8;
             letter-spacing: -0.01em;
+
             @include mq($from: desktop) {
-              letter-spacing: -0.01em;
               margin-top: 20px;
               font-size: 15px;
+              letter-spacing: -0.01em;
             }
           }
+
           .work-item__state {
             width: 100%;
             height: auto;
             margin-top: get-sp-vw(30);
+
             @include mq($from: desktop) {
               width: 292px;
               height: auto;
               margin-top: 20px;
             }
+
             img {
               width: 100%;
               height: auto;

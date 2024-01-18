@@ -4,368 +4,438 @@
 
 .staff {
   position: relative;
-  overflow: hidden;
   margin-top: get-sp-vw(50);
   margin-bottom: get-sp-vw(10);
+  overflow: hidden;
+
   @include mq($from: desktop) {
     margin-top: 30px;
     margin-bottom: 80px;
   }
+
   .staff__inner {
     position: relative;
     margin: 0 auto;
+
     @include mq($from: desktop) {
-      max-width: 1200px;
       width: 95%;
+      max-width: 1200px;
     }
+
     .c-radius14 {
-      z-index: 3;
       top: 10%;
       left: -20%;
+      z-index: 3;
       width: 104px;
       height: 104px;
       background-color: #67d271;
     }
+
     .c-radius15 {
-      z-index: 3;
       top: 40%;
       left: -30%;
+      z-index: 3;
       width: 104px;
       height: 104px;
       background-color: #eaeaea;
     }
+
     .c-radius16 {
-      z-index: 3;
       top: 50%;
       left: -20%;
+      z-index: 3;
       width: 60px;
       height: 60px;
       background-color: #0017af;
     }
+
     .c-radius17 {
-      z-index: 3;
       bottom: 20%;
       left: -30%;
+      z-index: 3;
       width: 30px;
       height: 30px;
       background-color: #67d271;
     }
+
     .c-radius18 {
-      z-index: 3;
       top: 2%;
       right: -20%;
+      z-index: 3;
       width: 64px;
       height: 64px;
       background-color: #eaeaea;
     }
+
     .c-radius19 {
-      z-index: 3;
       top: 25%;
       right: -10%;
+      z-index: 3;
       width: 76px;
       height: 76px;
       background-color: #67d271;
     }
+
     .c-radius20 {
-      z-index: 3;
       top: 22%;
       right: -12%;
+      z-index: 3;
       width: 30px;
       height: 30px;
       background-color: #eaeaea;
     }
+
     .c-radius21 {
-      z-index: 3;
       top: 50%;
       right: -30%;
+      z-index: 3;
       width: 130px;
       height: 130px;
       background-color: #0017af;
     }
+
     .c-radius22 {
-      z-index: 3;
       top: 60%;
       right: -20%;
+      z-index: 3;
       width: 63px;
       height: 63px;
       background-color: #eaeaea;
     }
+
     .c-radius23 {
-      z-index: 3;
-      bottom: 5%;
       right: -20%;
+      bottom: 5%;
+      z-index: 3;
       width: 30px;
       height: 30px;
       background-color: #0017af;
     }
+
     .staff__fv {
       width: get-sp-vw(315);
       margin: 0 auto;
+
       @include mq($from: desktop) {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 1050px;
         width: 98%;
+        max-width: 1050px;
       }
+
       .staff__textarea {
         @include mq($from: desktop) {
           width: 450px;
         }
+
         .staff__subtitle {
           position: relative;
           display: block;
-          font-weight: bold;
-          text-align: center;
-          color: map.get($color, "m-bg");
-          margin-bottom: get-sp-vw(30);
           width: get-sp-vw(195);
-          font-size: get-sp-vw(21);
-          padding: get-sp-vw(5) 0;
+          margin-bottom: get-sp-vw(30);
           margin-left: get-sp-vw(-30);
+          padding: get-sp-vw(5) 0;
+          color: map.get($color, "m-bg");
+          font-weight: bold;
+          font-size: get-sp-vw(21);
+          text-align: center;
+
           @include mq($from: desktop) {
-            padding: 5px 0;
-            margin-left: -100px;
-            text-align: center;
-            margin-bottom: 30px;
             width: 328px;
+            margin-bottom: 30px;
+            margin-left: -100px;
+            padding: 5px 0;
             font-size: 24px;
+            text-align: center;
           }
+
           &::before {
-            opacity: 0;
-            z-index: -1;
             position: absolute;
-            content: "";
             right: 0;
             bottom: 0;
+            z-index: -1;
             width: 100%;
             height: 100%;
             background-color: map.get($color, "accent");
+            opacity: 0;
+            content: "";
           }
         }
+
         h3 {
           font-weight: bold;
+          font-size: get-sp-vw(28);
           line-height: 1.8;
           letter-spacing: -0.01em;
-          font-size: get-sp-vw(28);
+
           @include mq($from: desktop) {
+            font-size: 30px;
             line-height: 1.8;
             letter-spacing: -0.01em;
-            font-size: 30px;
           }
         }
+
         .staff__explain {
-          line-height: 1.8;
           margin-top: get-sp-vw(30);
           font-size: get-sp-vw(16);
+          line-height: 1.8;
+
           @include mq($from: desktop) {
             margin-top: 20px;
             font-size: 16px;
           }
         }
       }
+
       .staff__imagearea {
         position: relative;
         z-index: 1;
         width: get-sp-vw(218);
-        margin: get-sp-vw(15) auto 0;
         height: auto;
+        margin: get-sp-vw(15) auto 0;
+
         @include mq($from: desktop) {
-          margin: 35px 0 0 0;
           width: 500px;
+          margin: 35px 0 0;
         }
+
         .c-radius12 {
-          z-index: 3;
           top: 50%;
           left: -10%;
+          z-index: 3;
           width: 25px;
           height: 25px;
           background-color: #0017af;
         }
+
         .c-radius13 {
-          z-index: 3;
           top: 20%;
           left: -10%;
+          z-index: 3;
           width: 65px;
           height: 65px;
           background-color: #67d271;
         }
-        .staff__imagearea-svg{
+
+        .staff__imagearea-svg {
           width: 100%;
           height: 100%;
         }
       }
     }
+
     .staff__items {
       display: flex;
       flex-direction: column;
       gap: get-sp-vw(80);
       margin-top: get-sp-vw(100);
+
       @include mq($from: desktop) {
-        margin-top: 70px;
         gap: 120px;
+        margin-top: 70px;
       }
+
       .staff__item {
         position: relative;
         padding: 0 0 get-sp-vw(145) 0;
         border: get-sp-vw(2) solid map.get($color, "m-text");
-        border-left: none;
         border-right: none;
+        border-left: none;
+
         @include mq($from: desktop) {
+          padding: 30px 90px 145px;
           border: 3px solid map.get($color, "m-text");
-          padding: 30px 90px 145px 90px;
         }
+
         &::before {
           position: absolute;
-          z-index: -1;
-          content: "";
-          width: 100%;
-          background-color: #eaeaea;
-          height: get-sp-vw(652);
           top: get-sp-vw(10);
+          z-index: -1;
+          width: 100%;
+          height: get-sp-vw(652);
+          background-color: #eaeaea;
+          content: "";
+
           @include mq($from: desktop) {
             top: -50px;
             left: -40px;
             height: 467px;
           }
         }
+
+        &.staff-item--en {
+          &::before {
+            top: get-sp-vw(10);
+            height: get-sp-vw(822);
+
+            @include mq($from: desktop) {
+              height: 500px;
+            }
+          }
+        }
+
         .staff-item__member {
           @include mq($from: desktop) {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            justify-content: space-between;
           }
+
           .staff-item__imagearea {
             width: get-sp-vw(142);
             height: auto;
             margin: get-sp-vw(-50) auto 0;
+
             @include mq($from: desktop) {
-              margin: 0;
-              height: auto;
               width: 285px;
+              height: auto;
+              margin: 0;
             }
+
             img {
               width: 100%;
               height: auto;
             }
           }
+
           .staff-item__textarea {
             width: get-sp-vw(315);
             margin: 0 auto;
+
             @include mq($from: desktop) {
-              margin: 0;
               width: 708px;
+              margin: 0;
             }
+
             .staff-item__fv {
               @include mq($from: desktop) {
                 display: flex;
                 align-items: center;
               }
+
               .staff-item-fv__icon {
                 width: get-sp-vw(77);
                 margin: get-sp-vw(-20) auto 0;
+
                 @include mq($from: desktop) {
-                  height: auto;
                   width: 77px;
+                  height: auto;
                   margin: 0 20px 0 0;
                 }
+
                 img {
                   width: 100%;
                   height: auto;
                 }
               }
+
               .staff-item-fv__textarea {
                 .staff-item-fv__group {
-                  font-weight: bold;
-                  letter-spacing: -0.01em;
                   margin-top: get-sp-vw(15);
                   margin-bottom: get-sp-vw(5);
+                  font-weight: bold;
                   font-size: get-sp-vw(16);
+                  letter-spacing: -0.01em;
                   text-align: center;
+
                   @include mq($from: desktop) {
-                    text-align: left;
                     margin-top: 0;
-                    letter-spacing: -0.01em;
                     margin-bottom: 10px;
                     font-size: 18px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
                   }
                 }
+
                 h4 {
+                  position: relative;
                   display: flex;
                   flex-wrap: wrap;
                   justify-content: center;
-                  position: relative;
-                  text-align: center;
+                  margin-bottom: get-sp-vw(10);
                   font-weight: bold;
                   font-size: get-sp-vw(32);
                   letter-spacing: -0.01em;
-                  margin-bottom: get-sp-vw(10);
+                  text-align: center;
+
                   @include mq($from: desktop) {
                     display: block;
-                    text-align: left;
-                    letter-spacing: -0.01em;
                     margin-bottom: 10px;
                     font-size: 36px;
+                    letter-spacing: -0.01em;
+                    text-align: left;
                   }
+
                   .name {
                     display: block;
                     width: 100%;
                     margin-bottom: get-sp-vw(10);
+
                     @include mq($from: desktop) {
                       display: inline;
-                      margin-bottom: 0;
                       width: auto;
+                      margin-bottom: 0;
                     }
                   }
+
                   .staff-item-fv__year {
                     display: block;
                     font-size: get-sp-vw(18);
                     letter-spacing: -0.01em;
+
                     @include mq($from: desktop) {
                       display: inline;
-                      letter-spacing: -0.01em;
                       font-size: 24px;
+                      letter-spacing: -0.01em;
                     }
                   }
+
                   .staff-item-fv__role {
                     font-size: get-sp-vw(18);
                     letter-spacing: -0.01em;
+
                     @include mq($from: desktop) {
                       display: inline;
-                      letter-spacing: -0.01em;
                       font-size: 24px;
+                      letter-spacing: -0.01em;
                     }
                   }
                 }
               }
             }
+
             .staff-item__title {
-              font-weight: bold;
-              font-size: get-sp-vw(21);
-              letter-spacing: -0.01em;
-              line-height: 1.8;
               margin-top: get-sp-vw(45);
               margin-bottom: get-sp-vw(20);
-              @include mq($from: desktop) {
-                letter-spacing: -0.01em;
-                margin-bottom: 10px;
-                margin-top: 40px;
-                font-size: 24px;
-              }
-            }
-            .staff-item__explain {
+              font-weight: bold;
+              font-size: get-sp-vw(21);
               line-height: 1.8;
               letter-spacing: -0.01em;
-              font-size: get-sp-vw(14);
+
               @include mq($from: desktop) {
-                line-height: 1.8;
+                margin-top: 40px;
+                margin-bottom: 10px;
+                font-size: 24px;
                 letter-spacing: -0.01em;
+              }
+            }
+
+            .staff-item__explain {
+              font-size: get-sp-vw(14);
+              line-height: 1.8;
+              letter-spacing: -0.01em;
+
+              @include mq($from: desktop) {
                 margin-top: 15px;
                 font-size: 16px;
+                line-height: 1.8;
+                letter-spacing: -0.01em;
               }
             }
           }
         }
+
         .staff-item__accordion {
           &.is-show {
             .c-global-navigation-child__inner {
@@ -373,286 +443,340 @@
               pointer-events: auto;
             }
           }
+
           .c-global-navigation-child__inner {
             opacity: 0;
             pointer-events: none;
           }
+
           .staff-item__readmore {
             position: absolute;
-            font-weight: bold;
-            width: get-sp-vw(315);
-            cursor: pointer;
+            right: 50%;
             bottom: get-sp-vw(40);
-            background-color: map.get($color, "m-text");
+            width: get-sp-vw(315);
+            padding: get-sp-vw(20) 0;
             color: map.get($color, "m-bg");
+            font-weight: bold;
+            font-size: get-sp-vw(18);
             letter-spacing: -0.01em;
             text-align: center;
-            right: 50%;
+            background-color: map.get($color, "m-text");
             transform: translateX(50%);
-            padding: get-sp-vw(20) 0;
-            font-size: get-sp-vw(18);
+            cursor: pointer;
+
             @include mq($from: desktop) {
-              cursor: pointer;
-              max-width: 1000px;
-              width: 95%;
-              bottom: 40px;
               right: 50%;
-              transform: translateX(50%);
+              bottom: 40px;
+              width: 95%;
+              max-width: 1000px;
               margin-top: 40px;
+              padding: 20px 0;
+              font-size: 21px;
               letter-spacing: -0.01em;
               text-align: center;
-              font-size: 21px;
-              padding: 20px 0;
-              transition: all 0.3s;
               border: 1px solid map.get($color, "m-text");
+              transform: translateX(50%);
+              cursor: pointer;
+              transition: all 0.3s;
+
               &:hover {
-                background-color: map.get($color, "m-bg");
                 color: map.get($color, "m-text");
+                background-color: map.get($color, "m-bg");
+
                 .staff-item__readmore-text {
-                  &:after {
+                  &::after {
                     color: map.get($color, "m-text");
                   }
                 }
               }
             }
+
             &.is-current {
               .staff-item__readmore-text {
                 &:first-child {
                   display: none;
                 }
+
                 &:last-child {
                   display: inline-block;
                 }
-                &:after {
+
+                &::after {
                   bottom: 0%;
                   transform: rotate(270deg) translateX(20%);
                 }
               }
             }
+
             .staff-item__readmore-text {
               position: relative;
               display: inline-block;
               padding-right: get-sp-vw(70);
+
               @include mq($from: desktop) {
                 padding-right: 70px;
               }
+
               &:first-child {
                 display: inline-block;
               }
+
               &:last-child {
                 display: none;
               }
-              &:after {
+
+              &::after {
                 position: absolute;
-                content: "〉";
                 right: 0;
                 bottom: 20%;
-                transform: rotate(90deg) translateX(50%);
                 color: map.get($color, "m-bg");
                 font-size: get-sp-vw(18);
+                transform: rotate(90deg) translateX(50%);
+                content: "〉";
+
                 @include mq($from: desktop) {
+                  font-size: 21px;
                   letter-spacing: -0.01em;
                   text-align: center;
-                  font-size: 21px;
                 }
               }
             }
           }
+
           .staff-item-accordion__contents {
             .staff-item-accordion__boxes {
               display: flex;
               flex-direction: column;
-              padding-top: get-sp-vw(100);
               gap: get-sp-vw(70);
+              padding-top: get-sp-vw(100);
+
               @include mq($from: desktop) {
-                padding-top: 150px;
                 gap: 80px;
+                padding-top: 150px;
               }
+
               .staff-item-accordion__box {
                 width: get-sp-vw(315);
                 margin: 0 auto;
+
                 @include mq($from: desktop) {
-                  margin: 0;
-                  width: auto;
                   display: flex;
-                  justify-content: space-between;
-                  align-items: center;
                   flex-wrap: wrap;
                   gap: 10px;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: auto;
+                  margin: 0;
                 }
+
                 &:nth-child(2n) {
                   flex-direction: row-reverse;
                 }
+
                 .staff-item-accordion__imagearea {
                   width: 100%;
                   margin-bottom: get-sp-vw(30);
+
                   @include mq($from: desktop) {
-                    margin-bottom: 0;
-                    height: auto;
                     width: 479px;
+                    height: auto;
+                    margin-bottom: 0;
                   }
+
                   img {
                     width: 100%;
                     height: auto;
                   }
                 }
+
                 .staff-item-accordion__textarea {
                   @include mq($from: desktop) {
                     width: 423px;
                   }
+
                   .staff-item-accordion__title {
+                    margin-bottom: get-sp-vw(25);
                     font-weight: bold;
                     font-size: get-sp-vw(21);
                     line-height: 1.8;
                     letter-spacing: -0.01em;
-                    margin-bottom: get-sp-vw(25);
+
                     @include mq($from: desktop) {
-                      line-height: 1.8;
-                      letter-spacing: -0.01em;
                       margin-bottom: 20px;
                       font-size: 24px;
+                      line-height: 1.8;
+                      letter-spacing: -0.01em;
                     }
                   }
+
                   .staff-item-accordion__explain {
                     font-size: get-sp-vw(14);
                     line-height: 1.8;
                     letter-spacing: -0.01em;
+
                     @include mq($from: desktop) {
+                      font-size: 16px;
                       line-height: 1.8;
                       letter-spacing: -0.01em;
-                      font-size: 16px;
                     }
                   }
                 }
               }
             }
+
             .staff-item-accordion__private {
               margin-top: get-sp-vw(50);
               padding: get-sp-vw(30);
               background-color: #ebecf8;
+
               @include mq($from: desktop) {
-                margin-top: 0;
+                display: flex;
                 flex-wrap: wrap;
                 gap: 10px;
-                background-color: #ebecf8;
-                padding: 36px 80px 36px 30px;
-                margin-top: 78px;
-                display: flex;
-                justify-content: space-between;
                 align-items: center;
+                justify-content: space-between;
+                margin-top: 0;
+                margin-top: 78px;
+                padding: 36px 80px 36px 30px;
+                background-color: #ebecf8;
               }
+
               @include mq($from: wide) {
                 flex-wrap: nowrap;
               }
+
               .staff-item-accordion-private__imagearea {
                 width: 100%;
+
                 @include mq($from: desktop) {
-                  height: auto;
                   width: 429px;
+                  height: auto;
                 }
+
                 img {
                   width: 100%;
                   height: auto;
                 }
               }
+
               .staff-item-accordion-private__textarea {
                 @include mq($from: desktop) {
                   width: 406px;
                 }
+
                 .staff-item-accordion-private__icon {
+                  width: get-sp-vw(46);
                   margin-top: get-sp-vw(-20);
                   margin-bottom: get-sp-vw(10);
-                  width: get-sp-vw(46);
+
                   @include mq($from: desktop) {
-                    margin-top: 0;
-                    height: auto;
                     width: 45px;
+                    height: auto;
+                    margin-top: 0;
                     margin-bottom: 10px;
                   }
+
                   img {
                     width: 100%;
                     height: auto;
                   }
                 }
+
                 .staff-item-accordion-private__title {
+                  margin-bottom: get-sp-vw(20);
                   font-weight: bold;
                   font-size: get-sp-vw(18);
                   letter-spacing: -0.01em;
-                  margin-bottom: get-sp-vw(20);
+
                   @include mq($from: desktop) {
                     margin-bottom: 20px;
-                    letter-spacing: -0.01em;
                     font-size: 21px;
+                    letter-spacing: -0.01em;
                   }
                 }
+
                 .staff-item-accordion-private__explain {
                   font-size: get-sp-vw(14);
                   line-height: 1.8;
                   letter-spacing: -0.01em;
+
                   @include mq($from: desktop) {
+                    font-size: 16px;
                     line-height: 1.8;
                     letter-spacing: -0.01em;
-                    font-size: 16px;
                   }
                 }
               }
             }
           }
         }
+
         .work-item__imagearea {
           position: relative;
           z-index: 2;
+
           @include mq($from: desktop) {
-            margin-left: -85px;
-            margin-top: 10px;
             width: 615px;
             height: auto;
+            margin-top: 10px;
+            margin-left: -85px;
           }
+
           img {
             width: 100%;
             height: auto;
           }
         }
+
         .work-item__textarea {
           position: relative;
           z-index: 2;
+
           @include mq($from: desktop) {
             width: 488px;
           }
+
           .work-item__icon {
             @include mq($from: desktop) {
               width: 65px;
               height: auto;
               margin-bottom: 25px;
             }
+
             img {
               width: 100%;
               height: auto;
             }
           }
+
           h4 {
             font-weight: bold;
+
             @include mq($from: desktop) {
-              line-height: 1.8;
-              letter-spacing: -0.01em;
               margin-bottom: 20px;
               font-size: 24px;
+              line-height: 1.8;
+              letter-spacing: -0.01em;
             }
           }
+
           .work-item__explain {
             line-height: 1.8;
+
             @include mq($from: desktop) {
-              letter-spacing: -0.01em;
               margin-top: 20px;
               font-size: 15px;
+              letter-spacing: -0.01em;
             }
           }
+
           .work-item__state {
             @include mq($from: desktop) {
               width: 292px;
               height: auto;
               margin-top: 20px;
             }
+
             img {
               width: 100%;
               height: auto;
