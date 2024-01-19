@@ -5,7 +5,7 @@ function svgAnime() {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../assets/data/robot.json',
+    path: 'https://atom-group.co.jp/recruit/assets/data/robot.json',
     rendererSettings: {
       className: 'logo-animation__svg'
     }

@@ -5,7 +5,7 @@ function svgAnime() {
     renderer: 'svg',
     loop: true,
     autoplay: true,
-    path: '../assets/data/look.json',
+    path: 'https://atom-group.co.jp/recruit/assets/data/look.json',
     rendererSettings: {
       className: 'fv-logo-animation__svg'
     }
